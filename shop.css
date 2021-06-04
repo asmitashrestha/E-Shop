@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid gray;
+    box-shadow: 2px 0px 5px gray;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contents{
+    font-size: 50px;
+    font-weight: bold;
+}
+.content{
+    font-size: 20px;
+    font-weight: bold;
+}
+.content a{
+    text-decoration: none;
+    font-size: 25px;
+    color:blue;
+    padding: 10px 20px;
+    margin: 5px;
+}
+content a:last-child{
+    background: black;
+    color:white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    perspective: 2200px;
+}
+.lcontainer{
+    flex-basis: 20%;
+    width: 200px;
+    height: 200px;
+    animation: animate 4s linear infinite; 
+}
+@keyframes animate{
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+.rcontainer{
+      flex-basis: 50%;
+      max-width: 400px;
+      margin-left: 100px;  
+}
+.rcontainer h1{
+    font-size: 50px;
+}
+.rcontainer p{
+    font-size: 25px;
+    margin: 20px 0px;
+}
+button{
+    background: black;
+    color: wheat;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding:10px 20px
+    margin: bottom 20px;
+}
+#collection{
+    padding: 100px 0px;
+    font-size: 100px;
+    text-align: center;
+}
+#collection h1{
+    font-weight: bolder;
+    text-align: left;
+}
+.collect{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,20%);
+    grid-auto-rows: minmax(200px,auto);
+    grid-gap: 1em;
+    justify-content: center;
+    height: 600px;
+    width: 800px;
+}
+.collect>div{
+    border: 0.2px solid grey;
+    position: relative;
+}
+.collect> div img{
+    width: 100%;
+    overflow: hidden;
+}
+.box1{
+    grid-row: 1/4;
+    grid-column: 1/4;
+}
+.collect>div img:hover{
+    transform: scale(1.2);
+    transition: 0.4s linear;
+}
+.price{
+    position: absolute;
+    font-size: 20px;
+    background: black;
+    color: wheat;
+}
+#man{
+    padding: 80px 0px;
+}
+.mans{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mans-stores{
+    text-align: center;
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px gray;
+    padding: 10px;
+}
+.mans-stores img{
+    width: 100%;
+}
+.mans-stores h2{
+    margin: 20px 0px;
+}
+.mans-stores h3{
+    background: black;
+    color: wheat;
+    padding: 10px;
+}
+.mans-stores:hover{
+    transform: translate(-15px);
+    transition:0.4 ease ;
+}
+#women{
+    padding: 80px 0px;
+}
+.womens{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.womens-stores{
+    text-align: center;
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px gray;
+    padding: 10px;
+}
+.womens-stores img{
+    width: 100%;
+}
+.womens-stores h2{
+    margin: 20px 0px;
+}
+.womens-stores h3{
+    background: black;
+    color: wheat;
+    padding: 10px;
+}
+.womens-stores:hover{
+    transform: translate(-15px);
+    transition:0.4 ease ;
+}
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: wheat;
+    background: black;
+    padding: 5px;
+}
+#man h2{
+    text-align: center;
+    font-weight: 1500;
+    justify-content: center;
+}
+#women h2{
+    text-align: center;
+    font-weight: 1500;
+    justify-content: center;
+}
